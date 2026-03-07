@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KalaKatha AI | Stories of India Through Living Art Forms</title>
+    <meta name="description"
+        content="A generative AI storytelling application blending narrative with regional Indian art styles using Google Gemini & Imagen.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+
+    <main class="container">
+        <!-- Header -->
+        <header class="hero">
+            <h1 class="title">Kala<span>Katha</span> AI</h1>
+            <p class="subtitle">Stories of India Through Living Art Forms</p>
+        </header>
+
+        <!-- Input Section -->
+        <section class="glass-panel generator-section">
+            <form id="generator-form">
+                <div class="input-group">
+                    <label for="scenario">Story Scenario</label>
+                    <textarea id="scenario" name="scenario" rows="3"
+                        placeholder="e.g., A young girl discovers courage during a village flood..."
+                        required></textarea>
+                </div>
+
+                <div class="input-group">
+                    <label for="style">Indian Art Style</label>
+                    <div class="custom-select">
+                        <select id="style" name="style" required>
+                            <option value="" disabled selected>Select an Art Style</option>
+                            <option value="Madhubani">Madhubani (Bihar) - Intricate motifs & natural colors</option>
+                            <option value="Warli">Warli (Maharashtra) - Geometric rhythms of life</option>
+                            <option value="Pattachitra">Pattachitra (Odisha) - Mythological narratives</option>
+                            <option value="Gond">Gond (Central India) - Vibrant dots & dashes</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" id="generate-btn" class="primary-btn">
+                    <span class="btn-text">Weave Story</span>
+                    <span class="loader hidden"></span>
+                </button>
+            </form>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-container" class="results-section hidden">
+            <!-- Content will be injected here via JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with Google Gemini & Imagen 3 • Deployed on Google Cloud</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
